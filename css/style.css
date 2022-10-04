@@ -1,0 +1,1243 @@
+
+/* Start Global Rulse*/
+
+*
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html
+{
+    margin: 0;
+    padding: 0;
+}
+ul
+{
+    list-style: none;
+}
+body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+.container
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width :768px)
+{
+    .container
+    {
+        width:750px ;
+    }
+    
+}
+@media (min-width :992px)
+{
+    .container
+    {
+        width:970px ;
+    }
+    
+}
+@media (min-width :1200px)
+{
+    .container
+    {
+        width: 1170px;
+    }
+    
+}
+
+input:focus,
+textarea:focus
+{
+    outline: none;
+}
+
+/* END Global Rulse*/
+/*------------ Start commponet ------------------*/
+.main-heading
+{
+    text-align: center;
+}
+.main-heading h2
+{
+    text-align: center;
+    font-size: 45px;
+    font-weight: normal;
+    position: relative;
+}
+.main-heading h2::before
+{
+    content: "";
+    position: absolute;
+    border: 1px solid #333;
+    width: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+
+}
+.main-heading h2::after
+{
+    content: "";
+    position: absolute;
+   background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -32px;
+
+}
+.main-heading p
+{
+    width: 550px;
+    max-width: 100%;
+    text-align: center;
+    margin: 50px auto 100px;
+}
+
+/*------------ END commponet ------------------*/
+/*------------ START Nav Bar -------------*/
+header
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+}
+header .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .container::after
+{
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: #fff;
+    bottom: 16px;
+    z-index: -1;
+}
+header .container img
+{
+    height: 70px;
+}
+header nav
+{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+}
+header nav ul
+{
+    display: flex;
+}
+@media (max-width :767px)
+{
+    header nav ul
+    {
+        display: none;
+    }
+    header nav .toggel-menu:hover + ul
+    {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+    header nav .toggel-menu:hover + ul a
+    {
+        padding: 15px;
+    }
+    header nav ul .active
+    {
+        padding-left: 50px;
+    }
+}
+
+@media (min-width :992px)
+{
+    header nav .toggel-menu
+    {
+        display: none;
+    }
+}
+
+header nav ul li a
+{
+    display: block;
+    padding: 40px 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+    z-index: 2;
+}
+header nav ul li a:hover,
+header nav ul li .active
+{
+    color: turquoise;
+    border-bottom: 1px solid turquoise;
+    
+}
+header nav .form
+{
+    position: relative;
+    height: 30px;
+    width: 40px;
+    border-left: 1px solid turquoise;
+    margin-left: 30px;
+
+}
+header nav .form i
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    font-size: 20px;
+    
+}
+/*----------- END Nav Bar ----------------*/
+
+/*----------- START Landing----------------*/
+.landing
+{
+    background-color: rgba(6, 3, 31, 0.705);
+    background-image: url('../image/wolf.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+.landing .overlly
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+.landing .text
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    color: #fff;
+    background-color: #0f738f96;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.landing .text .text-content
+{
+    max-width: 500px;
+}
+@media (max-width:772px)
+{
+    .landing .text .text-content,
+    .landing .text
+    {
+        width: 100%;
+    }
+}
+.landing .text .text-content h2
+{
+    font-weight: normal;
+    line-height: 1.6;
+}
+.landing .text .text-content p
+{
+    font-size: 14px;
+    line-height: 1.7;
+}
+.landing .change 
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.landing .left
+{
+    left: 30px;
+}
+.landing .right
+{
+    right: 30px;
+}
+.landing ul
+{
+    position: absolute;
+    display: flex;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.landing ul li
+{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #fff;
+    margin-left: 5px;
+    border-radius: 50%;
+   
+}
+.landing ul li.active
+{
+    background-color: turquoise;
+    border-color: turquoise;
+}
+@media (max-width:772px) 
+{
+    .landing ul , .landing .change
+    {
+        display: none;
+    }
+    
+
+}
+/*----------- END Landing ----------------*/
+
+/*------------ Start Services ------------------*/
+.services
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.services .serv-content
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(450px , 1fr));
+    grid-column-gap: 100px;
+    grid-row-gap: 50px;
+}
+.services .serv-content .srv-box
+{
+    display: flex;
+}
+.services .serv-content .srv-box .text
+{
+    margin-left: 40px;
+}
+.services .srv-box i
+{
+    color: #333;
+}
+.services .srv-box .text h2
+{
+    padding: 0;
+    margin: 0 0 30px;
+    color: turquoise;
+}
+.services .srv-box .text p
+{
+    line-height: 1.7;
+    color: #777;
+}
+@media (max-width:768px) 
+{
+    .services .serv-content .srv-box
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .services .serv-content .srv-box i 
+    {
+        margin: 0 0 20px 0;
+        
+    }
+    .services .serv-content .srv-box h2 
+    {
+        margin:  0;
+        padding: 0;
+    }
+}
+/*----------- END Services ----------------*/
+
+/*----------- START Design ----------------*/
+.design
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../image/design.jpg');
+    background-size: cover;
+    height: 660px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+.design .image,
+.design .text
+{
+    position: relative;
+    flex: 1;
+}
+.design .image
+{
+    text-align: center;
+}
+.design .image img
+{
+    position: relative;
+    bottom: -120px;
+}
+.design .text
+{
+    color: #fff;
+    background-color: rgba(64, 224, 208, 0.65);
+    padding: 50px;
+
+}
+.design .text h2
+{
+    font-weight: normal;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.design .text li 
+{
+    padding-bottom: 15px;
+}
+.design .text li::before
+{
+    font-family: "Font Awesome 5 Free" ;
+    content: "\f108" ;
+    font-weight: 900;
+    margin-right: 8px
+}
+@media (max-width:772px)
+{
+    .design .image
+    {
+        display: none;
+    }
+}
+/*----------- END Design ----------------*/
+/*----------- START Portfolio ----------------*/
+.portfolio
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.portfolio .shuffel ul
+{
+    display: flex;
+    justify-content: center;
+}
+.portfolio .shuffel ul li
+{
+    padding: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.portfolio .shuffel ul li.active
+{
+    background-color: turquoise;
+    color:white;
+}
+.portfolio .img-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio .img-container .box
+{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .portfolio .img-container .box
+    {
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 1198px) {
+    .portfolio .img-container .box
+    {
+        flex-basis: 25%;
+    }
+}
+.portfolio .img-container .box img
+{
+    max-width: 100%;
+    width: 450px;
+    height: 450px;
+}
+.portfolio .img-container .box .caption
+{
+    position: absolute;
+    padding: 20px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    bottom: -100%;
+    transition: 0.3s;
+}
+.portfolio .img-container .box:hover .caption
+{
+    bottom: 0;
+}
+.portfolio .img-container .box .caption h2
+{
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.portfolio .img-container .box .caption p{
+    color: turquoise;
+}
+.portfolio .more
+{
+    width: fit-content;
+    background-color: turquoise;
+    color: white;
+    display: block;
+    margin: 40px auto;
+    padding: 15px 40px;
+    text-decoration: none;
+}
+/*----------- END Portfolio ----------------*/
+
+/*----------- Start Video ----------------*/
+.video
+{
+    position: relative;
+}
+.video video
+{
+    width: 100%;
+
+}
+.video::before
+{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.52);
+}
+.video .text
+{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    text-align: center;
+    background-color: rgba(64, 224, 208, 0.698);
+    color:white;
+    padding: 50px;
+    width:100%
+}
+.video .text h2
+{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 20px 0 40px;
+}
+.video .text p
+{
+    margin-bottom:40px;
+}
+.video .text button
+{
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border: none;
+    color: white;
+    background-color: black;
+
+}
+/*----------- END Video ----------------*/
+/*----------- Start About us ----------------*/
+.about
+{
+    padding-top: 100px;
+    text-align: center;
+    overflow: hidden;
+}
+.about img
+{
+    position: relative;
+    max-width: 100%;
+    bottom: -100px;
+    margin-top: -100px;
+}
+@media (max-width:767px) {
+    .about img
+    {
+        bottom: -60px;
+        margin-top: -60px;
+    }
+    
+}
+
+/*----------- END About us ----------------*/
+/*----------- Start Satisfaid ----------------*/
+.satistique
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../image/satitque.jpg');
+    background-size: cover;
+    align-items: center;
+    position: relative;
+}
+ .satistique::before
+{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(100% - 100px);
+    background-color: rgba(17, 17, 17, 0.13);
+}
+.satistique .container
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.satistique .container .box
+{
+    color: white;
+    padding: 50px;
+    background-color: rgba(64, 224, 208, 0.424);
+} 
+@media (max-width:772px) 
+{
+    .satistique .container .box
+    {
+        flex-basis: 100%;
+        margin-bottom: 5px;
+    }   
+}
+@media (min-width:992px) 
+{
+    .satistique .container .box
+    {
+        flex-basis: 50%;
+    }   
+}
+@media (min-width:1198px) 
+{
+    .satistique .container .box
+    {
+        flex-basis: 25%;
+    }   
+}
+.satistique .container .box i
+{
+    color: #fff;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 40px;
+
+
+}
+.satistique .container .box .number
+{
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}
+.satistique .container .box p
+{
+    text-align: center;
+    font-size: 14px;
+}
+/*----------- END Satisfaid ----------------*/
+
+/*----------- Start Skils ----------------*/
+.our-skils
+{
+    padding-top:100px;
+    padding-bottom: 100px;
+   
+}
+.our-skils .container
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (max-width:768px) {
+    .our-skils .container
+    {
+        flex-direction: column;
+    
+    }
+    .our-skils .container > div
+    {
+        flex-basis: 100%;
+    }
+
+}
+
+.our-skils .container > div
+{
+    flex-basis: 40%;
+}
+.our-skils .container > div > h2
+{
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+}
+.our-skils .container > div > p
+{
+    line-height: 1.5;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 50px;
+}
+/*testimonials*/
+.our-skils .testimoial
+{
+    margin: 10px auto;
+    
+}
+.our-skils .testimoial .content
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    padding-bottom: 10px;
+    border-bottom:1px solid #777;
+}
+.our-skils .testimoial img
+{
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+    border: 1px solid #19c8fa;
+}
+.our-skils .testimoial .text
+{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #353235;
+}
+.our-skils .testimoial .text p
+{
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+    text-align: right;
+}
+@media (max-width:768px) 
+{
+    .our-skils .testimoial .content
+    {
+        flex-direction: column;
+
+    }
+    .our-skils .testimoial .text
+    {
+        margin-top:20px;
+        width: 95%;
+        text-align: center;
+    }
+    .our-skils .testimoial .text p 
+    {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+.our-skils .testimoial .change
+{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.our-skils .testimoial .change span
+{
+    border: 2px solid #19c8fa;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.our-skils .testimoial .change span.active
+{
+    background-color: #19c8fa;
+}
+/*our skils*/
+.our-skils .progs-skils
+{
+    margin-bottom: 40px;
+}
+.our-skils .progs-skils h3{
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.our-skils .progs-skils .prog
+{
+    width: 100%;
+    height: 30px;
+    background-color: #dbdbdb;
+    position: relative;
+}
+.our-skils .progs-skils .prog span
+{
+   display: block;
+    height: 100%;
+    background-color: #19c8fa;
+    position: relative;
+}
+.our-skils .progs-skils .prog span::before
+{
+    content: attr(data-progs);
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    top: -46px;
+    right: -24px;
+}
+.our-skils .progs-skils .prog span::after
+{    
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 15px;
+    border-color: black transparent transparent;
+    top: -20px;
+    right: -15px;
+}
+/*----------- END Skils ----------------*/
+/*----------- STARAT Quote ----------------*/
+.quote
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../image/quote.jfif');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.quote::before
+{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.52);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+}
+.quote .container
+{
+    position: relative;
+}
+.quote q
+{
+   font-size: 30px;
+   display: block;
+   position: relative;
+}
+.quote q::before
+{
+    font-family: "Font Awesome 5 Free" ;
+    content: '\f10d' ;
+    font-weight: 900;
+    font-size: 12px;
+    padding: 10px;
+    position: relative;
+    top: -15px;
+   
+}
+.quote q::after
+{
+    font-family: "Font Awesome 5 Free";
+    content: '\f10e';
+    font-weight: 900;
+    font-size: 12px;
+    padding: 10px;
+    position: relative;
+    top: -15px;
+}
+.quote  span
+{
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 20px;
+
+}
+/*----------- END Quote ----------------*/
+
+/*----------- START PRICING ----------------*/
+.pricing
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+
+}
+.pricing .container .content
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media (max-width:768px) 
+{
+    .pricing .box
+    {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+}
+@media (min-width:992px) 
+{
+    .pricing .box
+    {
+        flex-basis: calc(50% - 40px);
+    }
+}
+@media (min-width:1299px) 
+{
+    .pricing .box
+    {
+        flex-basis: calc(25% - 40px);
+    }
+}
+  
+
+.pricing .box .prix
+{
+    border-top: 1px solid #19c8fa;
+    border-bottom: 1px solid #19c8fa;
+    padding: 15px;
+
+}
+.pricing .box .prix h3
+{
+    font-weight: normal;
+    font-size: 30px;
+}
+.pricing .box .prix p span
+ {
+    font-size: 50px;
+    font-weight: 900;
+ }
+ .pricing .box ul 
+{
+    padding: 0;
+    margin-bottom: 35px;
+}
+ .pricing .box ul li
+{
+    margin:0 auto;
+    padding:  20px 0;
+    border-bottom: 1px solid #19c8fa;
+    width: 70%;
+     
+}
+.pricing .box button
+{
+    padding: 15px 30px;
+    border:1px solid #19c8fa;
+    background-color:white;
+
+}
+.pricing .contact-text
+{
+    font-size: 25px;
+    margin-top: 60px;
+    font-weight: 700;
+}
+.pricing .contact-link
+{
+    display: block;
+    background-color: #19c8fa;
+    color: white;
+    padding: 15px 30px;
+    width: fit-content;
+    margin: auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/*----------- END PRICING ----------------*/
+
+/*----------- START SUBSCRIBE ----------------*/
+.subscribe
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image:url('../image/quote.jfif');
+    background-size: cover;
+
+}
+.subscribe::before
+{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.52);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+@media (max-width:768px) 
+{
+    .subscribe .container
+    {
+        flex-direction: column;
+    }
+    .subscribe p
+    {
+        
+        margin-top: 30px ;
+    }
+}
+.subscribe .container
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.subscribe form
+{
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+}
+.subscribe form i
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    left: 15px;
+} 
+.subscribe form input[type='email']
+{
+    padding: 15px 20px 15px 60px;
+    border: 1px solid #fff;
+    background: none;
+    border-right: none;
+    width: calc(100% - 130px);
+} 
+.subscribe form input[type='email']::placeholder
+{
+    color: #fff;
+}
+.subscribe form input[type='email']
+{
+    caret-color: #fff;
+}
+ .subscribe form input[type='submit']
+{
+    border: 1px solid #fff;
+    border-left: none;
+    background: #19c8fa;
+    padding: 15px;
+    color:white;
+    width: 128px;
+    cursor: pointer;
+}
+
+
+.subscribe p
+{
+    margin-left: 40px;
+    color: #fff;
+}
+/*----------- END SUBSCRIBE ----------------*/
+/*----------- START CONTACT ----------------*/
+.contact
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+@media (max-width:768px) 
+{
+    .contact .content
+    {
+        flex-direction: column;
+    }   
+}
+.contact .content
+{
+    display: flex;
+    justify-content: space-between;
+}
+.contact form
+{
+    flex-basis: 70%;
+}
+.contact .content .main-input
+{
+    display: block;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact .content input[type='submit']
+{
+    display: flex;
+    margin-left: auto;
+    padding: 20px;
+    border: none;
+    background: #19c8fa;
+    color: #fff;
+    cursor: pointer;
+}
+.contact .content textarea
+{
+    height: 200px;
+}
+.contact .info 
+{
+    flex-basis: 25%;
+}
+@media (max-width:768px)
+{
+    .contact .info 
+    {
+        display: flex;
+       justify-content: space-between;
+       margin-top: 30px;
+
+    }
+    .contact .info .tel
+    {
+        flex-basis: 48%;
+    }
+    .contact .info .address
+    {
+        flex-basis: 48%;
+    }
+
+    .contact .info div h4
+    {
+        margin-top:20px ;
+    }
+    
+    
+}
+.contact .info h4
+{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.contact .info span
+{
+    display: block;
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 5px;
+}
+.contact .info .address h4
+{
+    margin-top: 80px;
+}
+@media (max-width:768px)
+{
+    .contact .info .address h4
+    {
+        margin-top: 20px;
+    }
+}
+.contact .info address
+{
+    display: block;
+    font-size: 15px;
+    color: #777;
+    padding-bottom: 5px;
+}
+/*----------- END CONTACT ----------------*/
+
+/*----------- START footer ----------------*/
+.footre
+{
+    padding-top: 100px;
+    padding-bottom: 20px;
+    background-image: url('../image/footer.jpeg');
+    background-size: cover;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.footre::before
+{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.52);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.footre .container
+{
+    position: relative;
+}
+.footre .container .social
+{
+    margin-bottom: 30px;
+}
+.footre .container .social p
+{
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 1px solid #fff;
+    padding: 30px;
+    width: fit-content;
+    margin: 0 auto 5px;
+}
+.footre .container .social i
+{
+    padding: 10px 15px;
+}
+.footre .container p:last-of-type
+{
+    font-size: 15px;
+
+}
+.footre .container p:last-of-type span
+{
+    color: #19c8fa;
+}
+/*----------- END footer ----------------*/
